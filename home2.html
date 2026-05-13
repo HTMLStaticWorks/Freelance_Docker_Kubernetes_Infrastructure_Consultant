@@ -107,8 +107,8 @@
                     <div class="relative z-10 animate-float">
                         <img src="assets/images/hero2.png" alt="DevOps Automation" class="rounded-[2rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]">
                     </div>
-                    <div class="absolute -top-10 -left-10 glass-card p-6 rounded-2xl border border-indigo-500/20 animate-float hidden xl:block">
-                        <i class="fas fa-terminal text-indigo-600 dark:text-indigo-400 text-2xl"></i>
+                    <div class="absolute -top-5 -left-4 sm:-top-10 sm:-left-10 z-20 glass-card p-4 sm:p-6 rounded-2xl border border-indigo-500/20 animate-float">
+                        <i class="fas fa-terminal text-indigo-600 dark:text-indigo-400 text-xl sm:text-2xl"></i>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                     <i class="fas fa-dharmachakra text-5xl text-indigo-500 mb-6"></i>
                     <h4 class="font-bold text-lg">K8s</h4>
                 </div>
-                <div class="glass-card p-10 rounded-3xl text-center hover-lift border border-indigo-500/5 shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                <div class="glass-card p-10 rounded-3xl text-center hover-lift border border-indigo-500/5 shadow-sm col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="500">
                     <i class="fab fa-docker text-5xl text-cyan-500 mb-6"></i>
                     <h4 class="font-bold text-lg">Docker</h4>
                 </div>
@@ -200,9 +200,9 @@
             
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="glass-card p-10 rounded-[2.5rem] border border-indigo-500/10 shadow-sm" data-aos="fade-right">
-                    <div class="flex justify-between items-center mb-10">
-                        <h4 class="font-bold text-2xl">Cloud Spending Report</h4>
-                        <span class="text-green-500 text-sm font-bold bg-green-500/10 px-3 py-1 rounded-full">-15% this month</span>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
+                        <h4 class="font-bold text-xl sm:text-2xl whitespace-nowrap">Cloud Spending Report</h4>
+                        <span class="text-green-500 text-xs sm:text-sm font-bold bg-green-500/10 px-3 py-1 rounded-full whitespace-nowrap">-15% this month</span>
                     </div>
                     <div class="space-y-8">
                         <div class="space-y-3">
@@ -210,7 +210,7 @@
                                 <span class="text-slate-600 dark:text-slate-400">Compute (EC2/EKS)</span>
                                 <span class="text-slate-900 dark:text-white">$4,200</span>
                             </div>
-                            <div class="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-2.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
                                 <div class="h-full bg-indigo-500 w-[70%]"></div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                                 <span class="text-slate-600 dark:text-slate-400">Storage (S3/EBS)</span>
                                 <span class="text-slate-900 dark:text-white">$1,100</span>
                             </div>
-                            <div class="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-2.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
                                 <div class="h-full bg-cyan-500 w-[30%]"></div>
                             </div>
                         </div>
@@ -229,20 +229,20 @@
                 <div class="glass-card p-10 rounded-[2.5rem] border border-indigo-500/10 shadow-sm" data-aos="fade-left">
                     <h4 class="font-bold text-2xl mb-10">Incident Heatmap</h4>
                     <div class="grid grid-cols-7 gap-3">
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-indigo-900 rounded-md"></div>
-                        <div class="w-full aspect-square bg-indigo-700 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-indigo-900 dark:bg-indigo-800 rounded-md"></div>
+                        <div class="w-full aspect-square bg-indigo-700 dark:bg-indigo-600 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
                         <div class="w-full aspect-square bg-indigo-500 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-indigo-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
-                        <div class="w-full aspect-square bg-slate-200 dark:bg-slate-800 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-indigo-800 dark:bg-indigo-700 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
+                        <div class="w-full aspect-square bg-slate-100 dark:bg-white/10 rounded-md"></div>
                     </div>
                     <div class="mt-10 flex justify-between items-center">
                         <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Stability Score</p>
@@ -282,15 +282,15 @@
                 <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-cyan-600/20 blur-[100px]"></div>
                 
                 <div class="relative z-10">
-                    <h2 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight">Ready to Scale Your <br><span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-cyan-400">Cloud-Native</span> Future?</h2>
-                    <p class="text-slate-600 dark:text-slate-400 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                    <h2 class="text-3xl lg:text-6xl font-bold mb-6 leading-tight">Ready to Scale Your <br><span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-cyan-400">Cloud-Native</span> Future?</h2>
+                    <p class="text-base lg:text-xl mb-10 max-w-2xl mx-auto font-medium leading-relaxed text-slate-600 dark:text-slate-400">
                         Join 50+ enterprise teams and optimize your cloud operations today with our expert consulting.
                     </p>
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <a href="contact.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95">
+                    <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                        <a href="contact.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm sm:text-lg shadow-xl shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95 whitespace-nowrap">
                             Schedule a Consultation
                         </a>
-                        <a href="services.html" class="glass-card px-10 py-5 rounded-2xl font-bold text-lg border border-indigo-500/20 hover:bg-indigo-500/10 transition-all hover:scale-105 active:scale-95">
+                        <a href="services.html" class="glass-card px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm sm:text-lg border border-indigo-500/20 hover:bg-indigo-500/10 transition-all hover:scale-105 active:scale-95 whitespace-nowrap">
                             Explore Services
                         </a>
                     </div>

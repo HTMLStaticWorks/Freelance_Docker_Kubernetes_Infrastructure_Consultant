@@ -139,14 +139,14 @@
                         <img src="assets/images/hero1.png" alt="Kubernetes Infrastructure" class="rounded-[2rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]">
                     </div>
                     <!-- Floating Cards -->
-                    <div class="absolute -top-10 -right-10 glass-card p-6 rounded-2xl border border-indigo-500/20 animate-float hidden xl:block" style="animation-delay: 1s;">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-500">
-                                <i class="fas fa-chart-line"></i>
+                    <div class="absolute -top-6 -right-4 sm:-top-10 sm:-right-10 z-20 glass-card p-4 sm:p-6 rounded-2xl border border-indigo-500/20 animate-float" style="animation-delay: 1s;">
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-500">
+                                <i class="fas fa-chart-line text-sm sm:text-base"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">System Load</p>
-                                <p class="text-xl font-bold text-slate-900 dark:text-white">Optimized</p>
+                                <p class="text-[8px] sm:text-[10px] text-slate-500 uppercase font-bold tracking-widest">System Load</p>
+                                <p class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Optimized</p>
                             </div>
                         </div>
                     </div>
@@ -241,9 +241,9 @@
                 </div>
                 <div data-aos="fade-left" class="relative">
                     <img src="assets/images/dashboard-preview.png" alt="Metrics Dashboard" class="rounded-[2.5rem] shadow-2xl border border-white/10">
-                    <div class="absolute -bottom-6 -left-6 glass-card p-4 rounded-xl border border-indigo-500/20 animate-pulse hidden md:block">
-                        <p class="text-[10px] text-slate-500 uppercase font-bold">Live Status</p>
-                        <p class="text-green-500 font-bold">All nodes healthy</p>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 z-20 glass-card p-3 sm:p-4 rounded-xl border border-indigo-500/20 animate-pulse">
+                        <p class="text-[8px] sm:text-[10px] text-slate-500 uppercase font-bold">Live Status</p>
+                        <p class="text-green-500 font-bold text-sm sm:text-base">All nodes healthy</p>
                     </div>
                 </div>
             </div>
@@ -258,55 +258,50 @@
                 <p class="text-slate-600 dark:text-slate-400">A systematic approach to infrastructure excellence.</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-24 gap-x-6 mt-20">
-                <!-- Step 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-32 gap-x-8 mt-24">
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-6 pt-12 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-sm">
-                        <div class="w-20 h-20 rounded-3xl overflow-hidden mx-auto -mt-20 mb-6 border-4 border-white dark:border-slate-900 transition-all shadow-lg group-hover:scale-110">
-                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=300&h=300" alt="Discovery" class="w-full h-full object-cover">
+                    <div class="glass-card p-10 pt-20 rounded-[2.5rem] relative border border-slate-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                        <div class="w-28 h-28 rounded-3xl overflow-hidden mx-auto -mt-28 mb-8 border-4 border-white dark:border-slate-900 transition-all shadow-xl group-hover:scale-110">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=400&h=400" alt="Discovery" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold mb-2">Discovery</h4>
-                        <p class="text-xs text-slate-500">Audit current infra & needs.</p>
+                        <h4 class="font-bold text-xl mb-3">Discovery</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Audit current infra & needs.</p>
                     </div>
                 </div>
-                <!-- Step 2 -->
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card p-6 pt-12 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-sm">
-                        <div class="w-20 h-20 rounded-3xl overflow-hidden mx-auto -mt-20 mb-6 border-4 border-white dark:border-slate-900 transition-all shadow-lg group-hover:scale-110">
-                            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&q=80&w=300&h=300" alt="Design" class="w-full h-full object-cover">
+                    <div class="glass-card p-10 pt-20 rounded-[2.5rem] relative border border-slate-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                        <div class="w-28 h-28 rounded-3xl overflow-hidden mx-auto -mt-28 mb-8 border-4 border-white dark:border-slate-900 transition-all shadow-xl group-hover:scale-110">
+                            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&q=80&w=400&h=400" alt="Design" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold mb-2">Design</h4>
-                        <p class="text-xs text-slate-500">Architecture & YAML planning.</p>
+                        <h4 class="font-bold text-xl mb-3">Design</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Architecture & YAML planning.</p>
                     </div>
                 </div>
-                <!-- Step 3 -->
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-6 pt-12 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-sm">
-                        <div class="w-20 h-20 rounded-3xl overflow-hidden mx-auto -mt-20 mb-6 border-4 border-white dark:border-slate-900 transition-all shadow-lg group-hover:scale-110">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=300&h=300" alt="Build" class="w-full h-full object-cover">
+                    <div class="glass-card p-10 pt-20 rounded-[2.5rem] relative border border-slate-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                        <div class="w-28 h-28 rounded-3xl overflow-hidden mx-auto -mt-28 mb-8 border-4 border-white dark:border-slate-900 transition-all shadow-xl group-hover:scale-110">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400&h=400" alt="Build" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold mb-2">Build</h4>
-                        <p class="text-xs text-slate-500">CI/CD & Containerization.</p>
+                        <h4 class="font-bold text-xl mb-3">Build</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">CI/CD & Containerization.</p>
                     </div>
                 </div>
-                <!-- Step 4 -->
                 <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card p-6 pt-12 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-sm">
-                        <div class="w-20 h-20 rounded-3xl overflow-hidden mx-auto -mt-20 mb-6 border-4 border-white dark:border-slate-900 transition-all shadow-lg group-hover:scale-110">
-                            <img src="https://images.unsplash.com/photo-1510511459019-5dee99c48ea9?auto=format&fit=crop&q=80&w=300&h=300" alt="Scale" class="w-full h-full object-cover">
+                    <div class="glass-card p-10 pt-20 rounded-[2.5rem] relative border border-slate-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                        <div class="w-28 h-28 rounded-3xl overflow-hidden mx-auto -mt-28 mb-8 border-4 border-white dark:border-slate-900 transition-all shadow-xl group-hover:scale-110">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400&h=400" alt="Scale" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold mb-2">Scale</h4>
-                        <p class="text-xs text-slate-500">K8s Orchestration & Tuning.</p>
+                        <h4 class="font-bold text-xl mb-3">Scale</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">K8s Orchestration & Tuning.</p>
                     </div>
                 </div>
-                <!-- Step 5 -->
-                <div class="text-center group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card p-6 pt-12 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-sm">
-                        <div class="w-20 h-20 rounded-3xl overflow-hidden mx-auto -mt-20 mb-6 border-4 border-white dark:border-slate-900 transition-all shadow-lg group-hover:scale-110">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=300&h=300" alt="Optimize" class="w-full h-full object-cover">
+                <div class="text-center group sm:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-10 pt-20 rounded-[2.5rem] relative border border-slate-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                        <div class="w-28 h-28 rounded-3xl overflow-hidden mx-auto -mt-28 mb-8 border-4 border-white dark:border-slate-900 transition-all shadow-xl group-hover:scale-110">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=400&h=400" alt="Optimize" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold mb-2">Optimize</h4>
-                        <p class="text-xs text-slate-500">Monitoring & Cost Reduction.</p>
+                        <h4 class="font-bold text-xl mb-3">Optimize</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Monitoring & Cost Reduction.</p>
                     </div>
                 </div>
             </div>
@@ -370,6 +365,28 @@
                             <p class="text-5xl font-bold text-pink-500 mb-3">24/7</p>
                             <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Expert Support</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Box Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="always-dark p-12 md:p-20 rounded-[3.5rem] bg-indigo-600 text-white text-center relative overflow-hidden shadow-2xl shadow-indigo-600/30" data-aos="zoom-in">
+                <!-- Background Decorations -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl -mr-20 -mt-20"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400/10 blur-3xl -ml-20 -mb-20"></div>
+
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Ready to Modernize Your <br><span class="text-cyan-300">Infrastructure?</span></h2>
+                    <p class="text-indigo-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Join 50+ engineering teams that have scaled their operations with our Kubernetes and DevOps expertise.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="contact.html" class="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-xl">Book a Strategy Call</a>
+                        <a href="case-studies.html" class="bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/40 hover:scale-105 transition-all">View Success Stories</a>
                     </div>
                 </div>
             </div>

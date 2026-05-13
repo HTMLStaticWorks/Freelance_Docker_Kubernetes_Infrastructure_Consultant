@@ -132,6 +132,16 @@ body {
     border: 1px solid #cbd5e1 !important;
     color: #0f172a !important;
 }
+
+/* Dark Mode Select Options Fix */
+html.dark select option {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+}
+
+html.dark select {
+    color-scheme: dark;
+}
 .light input::placeholder, .light textarea::placeholder {
     color: #94a3b8 !important;
 }
@@ -151,8 +161,11 @@ img {
 .light #mobile-menu {
     background: #ffffff !important;
 }
-.light #mobile-menu a {
+.light #mobile-menu a:not(.bg-indigo-600) {
     color: #0f172a !important;
+}
+.light #mobile-menu a.bg-indigo-600 {
+    color: #ffffff !important;
 }
 
 /* Sidebar Adaptability */
@@ -160,11 +173,12 @@ img {
     background: #ffffff !important;
     border-right: 1px solid #e2e8f0;
 }
-.light .sidebar-link:not(.bg-indigo-600) {
+.light .sidebar-link:not(.active) {
     color: #475569 !important;
 }
-.light .sidebar-link:not(.bg-indigo-600):hover {
+.light .sidebar-link:not(.active):hover {
     background: #f1f5f9 !important;
+    color: #4f46e5 !important; /* Indigo on hover for clarity */
 }
 
 /* Animations */
