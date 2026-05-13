@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Logic
     const themeToggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
     const htmlElement = document.documentElement;
+    const sidebar = document.getElementById('sidebar');
+    const mobileMenu = document.getElementById('mobile-menu');
     
     const updateThemeIcons = (theme) => {
         const icons = document.querySelectorAll('#theme-icon, #theme-toggle-mobile');
@@ -43,23 +45,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // RTL Toggle Logic
     const rtlToggles = document.querySelectorAll('#rtl-toggle');
-    const savedRtl = localStorage.getItem('rtl') === 'true';
 
+    const updateRtlButtons = (isRtl) => {
+        rtlToggles.forEach(btn => {
+            btn.innerText = isRtl ? 'LTR' : 'RTL';
+        });
+    };
+
+    const savedRtl = localStorage.getItem('rtl') === 'true';
     if (savedRtl) {
-        document.body.setAttribute('dir', 'rtl');
+        htmlElement.setAttribute('dir', 'rtl');
+        updateRtlButtons(true);
+        if (sidebar) {
+            sidebar.classList.add('translate-x-full');
+            sidebar.classList.remove('-translate-x-full');
+        }
+    } else {
+        htmlElement.setAttribute('dir', 'ltr');
+        updateRtlButtons(false);
+        if (sidebar) {
+            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('translate-x-full');
+        }
     }
 
     rtlToggles.forEach(btn => {
         btn.addEventListener('click', () => {
-            const isRtl = document.body.getAttribute('dir') === 'rtl';
-            document.body.setAttribute('dir', isRtl ? 'ltr' : 'rtl');
-            localStorage.setItem('rtl', !isRtl);
+            const isRtl = htmlElement.getAttribute('dir') === 'rtl';
+            const newRtl = !isRtl;
+            htmlElement.setAttribute('dir', newRtl ? 'rtl' : 'ltr');
+            localStorage.setItem('rtl', newRtl);
+            updateRtlButtons(newRtl);
+            
+            if (sidebar) {
+                if (newRtl) {
+                    sidebar.classList.add('translate-x-full');
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('translate-x-full');
+                }
+            }
         });
     });
 
     // Mobile Menu Logic
     const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
@@ -83,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dashboard Content Switching
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     const dashboardContents = document.querySelectorAll('.dashboard-content');
-    const sidebar = document.getElementById('sidebar');
 
     if (sidebarLinks.length > 0) {
         sidebarLinks.forEach(link => {
@@ -110,7 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (window.innerWidth < 1024 && sidebar) {
-                    sidebar.classList.add('-translate-x-full');
+                    const isRtl = htmlElement.getAttribute('dir') === 'rtl';
+                    if (isRtl) {
+                        sidebar.classList.add('translate-x-full');
+                        sidebar.classList.remove('-translate-x-full');
+                    } else {
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-full');
+                    }
                 }
             });
         });
@@ -120,7 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarToggle = document.getElementById('sidebar-toggle');
     if (sidebarToggle && sidebar) {
         sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('-translate-x-full');
+            const isRtl = htmlElement.getAttribute('dir') === 'rtl';
+            if (isRtl) {
+                sidebar.classList.toggle('translate-x-full');
+                sidebar.classList.remove('-translate-x-full');
+            } else {
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.remove('translate-x-full');
+            }
         });
     }
 

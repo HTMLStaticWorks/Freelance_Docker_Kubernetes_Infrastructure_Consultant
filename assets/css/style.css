@@ -171,7 +171,7 @@ img {
 /* Sidebar Adaptability */
 .light aside.glass-card {
     background: #ffffff !important;
-    border-right: 1px solid #e2e8f0;
+    border-inline-end: 1px solid #e2e8f0;
 }
 .light .sidebar-link:not(.active) {
     color: #475569 !important;
@@ -226,7 +226,7 @@ img {
 #back-to-top {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    inset-inline-end: 30px;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
