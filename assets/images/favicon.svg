@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- Rounded Background -->
+    <rect width="512" height="512" rx="120" fill="#4f46e5"/>
+    
+    <!-- Stacked Cubes Icon (Simplified) -->
+    <g fill="white">
+        <!-- Top Cube -->
+        <path d="M256 80l80 46v92l-80 46-80-46v-92z" opacity="0.9"/>
+        <!-- Bottom Left Cube -->
+        <path d="M160 240l80 46v92l-80 46-80-46v-92z" opacity="0.7"/>
+        <!-- Bottom Right Cube -->
+        <path d="M352 240l80 46v92l-80 46-80-46v-92z" opacity="0.7"/>
+    </g>
+</svg>
