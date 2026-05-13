@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KubeScale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: { indigo: '#4f46e5', purple: '#9333ea', cyan: '#06b6d4' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-mesh transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20 shrink-0">
+                        <i class="fas fa-cubes-stacked text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">KubeScale</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link nav-link-ltr text-sm font-medium">Home 1</a>
+                    <a href="home2.html" class="nav-link nav-link-ltr text-sm font-medium">Home 2</a>
+                    <a href="about.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">About</a>
+                    <a href="services.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Services</a>
+                    <a href="blog.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Blog</a>
+                    <a href="dashboard.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Dashboard</a>
+                    <a href="contact.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-xl"><span id="theme-icon">☀️</span></button>
+                    <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-sm font-bold">RTL</button>
+                    <a href="login.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20">Login</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-xl">☀️</button>
+                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-slate-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-card border-t border-slate-200 dark:border-white/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Home 1</a>
+                <a href="home2.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Home 2</a>
+                <a href="about.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">About</a>
+                <a href="services.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Services</a>
+                <a href="blog.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Blog</a>
+                <a href="dashboard.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Dashboard</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="login.html" class="text-center px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-600/20">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative always-dark pt-48 pb-32 overflow-hidden bg-slate-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/about-hero-bg.png" alt="Cloud Infrastructure" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-slate-900"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight text-white" data-aos="fade-up">Architecting the <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-300">Future</span> of Infrastructure</h1>
+            <p class="text-slate-300 text-xl leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">We bridge the gap between development and operations with cloud-native precision and scalable automation.</p>
+        </div>
+    </header>
+
+    <!-- Consultant Journey -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right" class="relative max-w-lg mx-auto lg:ml-0">
+                    <img src="assets/images/consultant.png" alt="Infrastructure Consultant" class="rounded-[2.5rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]">
+                    <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl border border-indigo-500/20 hidden md:block animate-float">
+                        <p class="text-2xl font-bold text-indigo-600 dark:text-white">10+</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold tracking-widest">Years Experience</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-10">A Decade of <span class="text-cyan-600 dark:text-cyan-400">Cloud Excellence</span></h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed text-lg">Our journey began in the early days of containerization. From the first Docker release to the dominance of Kubernetes, we've been at the forefront of the infrastructure revolution.</p>
+                    <p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed text-lg">We believe that infrastructure shouldn't be a bottleneck—it should be a competitive advantage. That's why we focus on automation, security, and scalability for every client we serve.</p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-lg border border-indigo-500/10">10+</div>
+                            <span class="text-slate-700 dark:text-white font-bold">Years of DevOps</span>
+                        </div>
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-lg border border-indigo-500/10">CKA</div>
+                            <span class="text-slate-700 dark:text-white font-bold">Certified K8s Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise & Skills -->
+    <section class="py-24 bg-slate-50 dark:bg-white/5 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-20">Our Tech Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+                <!-- Skill 1 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fab fa-docker text-4xl text-cyan-500 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Docker</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fas fa-dharmachakra text-4xl text-indigo-600 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">K8s</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fas fa-file-code text-4xl text-purple-600 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Terraform</p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fab fa-github text-4xl text-slate-900 dark:text-white mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Actions</p>
+                </div>
+                <!-- Skill 5 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fab fa-jenkins text-4xl text-red-500 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Jenkins</p>
+                </div>
+                <!-- Skill 6 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fas fa-chart-area text-4xl text-orange-500 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Grafana</p>
+                </div>
+                <!-- Skill 7 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fas fa-fire-extinguisher text-4xl text-pink-500 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Prometheus</p>
+                </div>
+                <!-- Skill 8 -->
+                <div class="glass-card p-6 rounded-2xl hover-lift border border-indigo-500/5 shadow-sm">
+                    <i class="fas fa-cloud text-4xl text-blue-500 mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">AWS/GCP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="glass-card p-8 md:p-12 rounded-[2.5rem] border border-indigo-500/10 hover-lift relative overflow-hidden" data-aos="fade-right">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-indigo-600/10 blur-3xl"></div>
+                    <div class="w-14 h-14 bg-indigo-600/10 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6">
+                        <i class="fas fa-bullseye text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed font-medium">
+                        To democratize enterprise-grade infrastructure by providing engineering teams with the tools, knowledge, and automation needed to scale without limits and build with total confidence.
+                    </p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="glass-card p-8 md:p-12 rounded-[2.5rem] border border-indigo-500/10 hover-lift relative overflow-hidden" data-aos="fade-left">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-600/10 blur-3xl"></div>
+                    <div class="w-14 h-14 bg-cyan-600/10 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-6">
+                        <i class="fas fa-eye text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed font-medium">
+                        To become the global standard for cloud-native infrastructure consulting, where every deployment is automated, every cluster is optimized, and every team is empowered to ship faster.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Stats below -->
+            <div class="mt-20 flex flex-col md:flex-row justify-center items-center gap-12" data-aos="fade-up">
+                <div class="text-center">
+                    <p class="text-5xl font-bold text-indigo-600 dark:text-white mb-3">500k+</p>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Lines of IaC Written</p>
+                </div>
+                <div class="hidden md:block w-px h-20 bg-slate-200 dark:bg-white/10"></div>
+                <div class="text-center">
+                    <p class="text-5xl font-bold text-indigo-600 dark:text-white mb-3">24/7</p>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Global Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Footer -->
+    <footer class="pt-24 pb-12 glass-card border-t border-slate-200 dark:border-white/10 transition-colors relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20 shrink-0">
+                            <i class="fas fa-cubes-stacked text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">KubeScale</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-sm mb-10 leading-relaxed text-sm">
+                        Empowering engineering teams to build, deploy, and scale with confidence using cloud-native technologies and automation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Services</h4>
+                    <ul class="space-y-4 text-slate-600 dark:text-slate-400 text-sm font-medium">
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Kubernetes Setup</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Dockerization</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">CI/CD Pipelines</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Cloud Migration</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">IaC Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Company</h4>
+                    <ul class="space-y-4 text-slate-600 dark:text-slate-400 text-sm font-medium">
+                        <li><a href="about.html" class="hover:text-indigo-600 transition-colors">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-indigo-600 transition-colors">Case Studies</a></li>
+                        <li><a href="blog.html" class="hover:text-indigo-600 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                        <li><a href="dashboard.html" class="hover:text-indigo-600 transition-colors">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Newsletter</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 font-medium">Stay updated with the latest DevOps trends and cloud-native insights.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="newsletter-input px-5 py-3 rounded-xl outline-none focus:border-indigo-500 transition-all text-sm font-medium shadow-sm">
+                        <button class="bg-indigo-600 text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-indigo-600/20 hover:scale-[1.02] transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-10 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">© 2026 KubeScale Consulting. All rights reserved.</p>
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#" class="hover:text-indigo-600 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-indigo-600 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Arrow -->
+        <button id="back-to-top" class="w-12 h-12 bg-indigo-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all shadow-indigo-600/30">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | KubeScale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: { indigo: '#4f46e5', purple: '#9333ea', cyan: '#06b6d4' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-mesh transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20 shrink-0">
+                        <i class="fas fa-cubes-stacked text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">KubeScale</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Home 1</a>
+                    <a href="home2.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Home 2</a>
+                    <a href="about.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">About</a>
+                    <a href="services.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Services</a>
+                    <a href="blog.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Blog</a>
+                    <a href="dashboard.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Dashboard</a>
+                    <a href="contact.html" class="nav-link nav-link-ltr text-sm font-medium text-indigo-500 font-bold">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-xl"><span id="theme-icon">☀️</span></button>
+                    <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-sm font-bold">RTL</button>
+                    <a href="login.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20">Login</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-xl">☀️</button>
+                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-slate-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-card border-t border-slate-200 dark:border-white/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Home 1</a>
+                <a href="home2.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Home 2</a>
+                <a href="about.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">About</a>
+                <a href="services.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Services</a>
+                <a href="blog.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Blog</a>
+                <a href="dashboard.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Dashboard</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="login.html" class="text-center px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-600/20">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative always-dark pt-48 pb-32 overflow-hidden bg-slate-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/about-hero-bg.png" alt="Collaborate with KubeScale" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-slate-900"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight text-white" data-aos="fade-up">Let's <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-300">Collaborate</span></h1>
+            <p class="text-slate-300 text-xl leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Ready to scale your infrastructure? Reach out for a free architecture audit and strategy session.</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <!-- Form -->
+                <div class="glass-card p-12 md:p-16 rounded-[3.5rem] border border-indigo-500/10 shadow-sm" data-aos="fade-right">
+                    <form action="#" class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-bold uppercase text-slate-500 ml-5 tracking-widest">Full Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none transition-all shadow-sm">
+                            </div>
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-bold uppercase text-slate-500 ml-5 tracking-widest">Email Address</label>
+                                <input type="email" placeholder="john@company.com" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none transition-all shadow-sm">
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-bold uppercase text-slate-500 ml-5 tracking-widest">Subject</label>
+                            <div class="relative">
+                                <select class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none transition-all appearance-none text-slate-700 dark:text-slate-400 font-medium shadow-sm">
+                                    <option>Kubernetes Migration</option>
+                                    <option>CI/CD Automation</option>
+                                    <option>Cost Optimization</option>
+                                    <option>Security Audit</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                                <div class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400"><i class="fas fa-chevron-down"></i></div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-bold uppercase text-slate-500 ml-5 tracking-widest">Message</label>
+                            <textarea rows="6" placeholder="Tell us about your current infrastructure challenges..." class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none transition-all shadow-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-indigo-600/30 hover:scale-[1.02]">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Info & Illustration -->
+                <div class="space-y-16" data-aos="fade-left">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-8">Expert Infrastructure Support</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-12 text-lg">We usually respond to inquiries within 12 hours. For urgent production issues, please mention "URGENT" in the subject line to bypass our general queue.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-8 group">
+                                <div class="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform shadow-sm border border-indigo-500/10"><i class="fas fa-envelope text-2xl"></i></div>
+                                <div>
+                                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Email Us</p>
+                                    <p class="font-bold text-xl text-slate-900 dark:text-white">hello@kubescale.io</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-8 group">
+                                <div class="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform shadow-sm border border-indigo-500/10"><i class="fas fa-map-marker-alt text-2xl"></i></div>
+                                <div>
+                                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Location</p>
+                                    <p class="font-bold text-xl text-slate-900 dark:text-white">Remote | Global Consulting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-10 rounded-[2.5rem] border border-indigo-500/10 bg-indigo-600/[0.03] shadow-sm relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-indigo-600/10 blur-3xl"></div>
+                        <h4 class="font-bold text-2xl mb-5">Book a Discovery Call</h4>
+                        <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">Schedule a 15-minute intro call to discuss your project requirements and get initial feedback from our lead consultant.</p>
+                        <a href="#" class="inline-flex items-center gap-4 text-indigo-600 dark:text-indigo-400 font-bold hover:gap-6 transition-all text-lg group">
+                            Schedule on Calendly <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Footer -->
+    <footer class="pt-24 pb-12 glass-card border-t border-slate-200 dark:border-white/10 transition-colors relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20 shrink-0">
+                            <i class="fas fa-cubes-stacked text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">KubeScale</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-sm mb-10 leading-relaxed text-sm">
+                        Empowering engineering teams to build, deploy, and scale with confidence using cloud-native technologies and automation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all border border-indigo-500/10">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Services</h4>
+                    <ul class="space-y-4 text-slate-600 dark:text-slate-400 text-sm font-medium">
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Kubernetes Setup</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Dockerization</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">CI/CD Pipelines</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">Cloud Migration</a></li>
+                        <li><a href="services.html" class="hover:text-indigo-600 transition-colors">IaC Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Company</h4>
+                    <ul class="space-y-4 text-slate-600 dark:text-slate-400 text-sm font-medium">
+                        <li><a href="about.html" class="hover:text-indigo-600 transition-colors">About Us</a></li>
+                        <li><a href="case-studies.html" class="hover:text-indigo-600 transition-colors">Case Studies</a></li>
+                        <li><a href="blog.html" class="hover:text-indigo-600 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                        <li><a href="dashboard.html" class="hover:text-indigo-600 transition-colors">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 text-slate-900 dark:text-white uppercase text-[10px] tracking-widest">Newsletter</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 font-medium">Stay updated with the latest DevOps trends and cloud-native insights.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="newsletter-input px-5 py-3 rounded-xl outline-none focus:border-indigo-500 transition-all text-sm font-medium shadow-sm">
+                        <button class="bg-indigo-600 text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-indigo-600/20 hover:scale-[1.02] transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-10 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">© 2026 KubeScale Consulting. All rights reserved.</p>
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#" class="hover:text-indigo-600 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-indigo-600 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Arrow -->
+        <button id="back-to-top" class="w-12 h-12 bg-indigo-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all shadow-indigo-600/30">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | KubeScale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: { indigo: '#4f46e5', purple: '#9333ea', cyan: '#06b6d4' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-mesh transition-colors duration-300">
+
+    
+    <div class="fixed top-8 right-8 z-50 flex items-center gap-2 md:gap-4">
+        <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-all text-sm font-bold dark:text-white" title="Toggle RTL">RTL</button>
+        <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-xl transition-all active:scale-90"><span id="theme-icon">☀️</span></button>
+    </div>
+
+    <div class="auth-wrapper">
+        <div class="glass-card p-10 md:p-12 rounded-[2.5rem] border border-white/10 w-full max-w-2xl shadow-2xl relative overflow-hidden" data-aos="zoom-in">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-indigo-600/10 blur-3xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-600/10 blur-3xl"></div>
+
+            <!-- Logo + Brand -->
+            <a href="index.html" class="flex items-center justify-center gap-3 mb-8 relative z-10 hover:opacity-80 transition-opacity group">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20 shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-cubes-stacked text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">KubeScale</span>
+            </a>
+
+            <!-- Create Account Heading -->
+            <div class="text-center mb-8 relative z-10">
+                <h1 class="text-3xl font-bold mb-3 text-slate-900 dark:text-white">Create Account</h1>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Join our community of elite infrastructure engineers.</p>
+            </div>
+
+            <form action="dashboard.html" class="space-y-6 relative z-10">
+                <!-- Name Input -->
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-slate-500 ml-4 tracking-widest">Full Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all shadow-sm font-medium" required>
+                </div>
+
+                <!-- Company Input -->
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-slate-500 ml-4 tracking-widest">Company</label>
+                    <input type="text" placeholder="TechCorp Inc." class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all shadow-sm font-medium" required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-slate-500 ml-4 tracking-widest">Email Address</label>
+                    <input type="email" placeholder="john@company.com" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all shadow-sm font-medium" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-slate-500 ml-4 tracking-widest">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="signup-password" placeholder="••••••••" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 pr-14 outline-none focus:border-indigo-500 transition-all shadow-sm font-medium" required>
+                        <div class="password-toggle" onclick="togglePassword('signup-password', this)">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirm Password Input -->
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-slate-500 ml-4 tracking-widest">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" placeholder="••••••••" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 pr-14 outline-none focus:border-indigo-500 transition-all shadow-sm font-medium" required>
+                        <div class="password-toggle" onclick="togglePassword('confirm-password', this)">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="px-2 pt-1">
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                        <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 dark:border-white/10 text-indigo-600 focus:ring-indigo-500 transition-all cursor-pointer" required>
+                        <span class="text-xs text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors leading-tight font-medium">
+                            I agree to the <a href="#" class="text-indigo-600 font-bold hover:underline transition-all">Terms of Service</a> and <a href="#" class="text-indigo-600 font-bold hover:underline transition-all">Privacy Policy</a>.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Signup Button -->
+                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-4 rounded-2xl shadow-xl shadow-indigo-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all mt-4">Create My Account</button>
+            </form>
+
+            <!-- Social Signup Section -->
+            <div class="mt-8 relative z-10">
+                <div class="relative flex items-center justify-center mb-6">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-white/10"></div></div>
+                    <span class="relative px-4 text-[10px] font-bold uppercase text-slate-500 bg-white dark:bg-slate-900 dark:bg-opacity-0 backdrop-blur-xl">Or register with</span>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <a href="#" class="social-btn" title="Google"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" title="Apple"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+
+            <!-- Login Redirect Text -->
+            <div class="mt-8 text-center relative z-10">
+                <p class="text-sm text-slate-500 font-medium">
+                    Already have an account? <a href="login.html" class="text-indigo-600 font-bold hover:underline">Log in here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Membership Features Section -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function togglePassword(inputId, iconElement) {
+            const input = document.getElementById(inputId);
+            const icon = iconElement.querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>
