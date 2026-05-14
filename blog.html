@@ -91,8 +91,8 @@
                     <div class="flex items-center justify-between px-4">
                         <span class="text-sm font-medium">Appearance</span>
                         <div class="flex items-center gap-2">
-                            <button id="theme-toggle-mobile" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xl">☀️</button>
-                            <button id="rtl-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-bold">RTL</button>
+                            <button id="theme-toggle-mobile" class="h-11 w-11 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xl">☀️</button>
+                            <button id="rtl-toggle" class="h-11 px-4 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-bold">RTL</button>
                         </div>
                     </div>
                     <a href="login.html" class="text-center px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-600/20">Login</a>
@@ -124,13 +124,13 @@
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10">
                 <!-- Blog 1 -->
-                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm"
+                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm flex flex-col"
                     data-aos="fade-up">
-                    <div class="h-64 relative overflow-hidden">
+                    <div class="h-64 relative overflow-hidden shrink-0">
                         <img src="assets/images/dashboard-preview.png" alt="K8s Best Practices"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-6 sm:p-10">
+                    <div class="p-6 sm:p-10 flex-1 flex flex-col">
                         <span
                             class="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-4 block">Best
                             Practices</span>
@@ -139,7 +139,7 @@
                             identify and eliminate waste in your clusters using smarter resource scheduling and spot
                             instances.</p>
                         <div
-                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5">
+                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5 mt-auto">
                             <span class="text-xs text-slate-500 font-bold uppercase tracking-widest">May 10, 2026</span>
                             <a href="#"
                                 class="text-indigo-600 dark:text-indigo-400 font-bold text-sm flex items-center gap-2 group/link transition-all">
@@ -152,20 +152,20 @@
                 </div>
 
                 <!-- Blog 2 -->
-                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm"
+                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm flex flex-col"
                     data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-64 relative overflow-hidden">
+                    <div class="h-64 relative overflow-hidden shrink-0">
                         <img src="assets/images/workflow.png" alt="Docker Optimization"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-6 sm:p-10">
+                    <div class="p-6 sm:p-10 flex-1 flex flex-col">
                         <span
                             class="text-[10px] font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-4 block">Engineering</span>
                         <h3 class="text-2xl font-bold mb-5 leading-tight">Mastering Multi-Stage Docker Builds</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm mb-10 leading-relaxed">Reducing your
                             container image size by up to 90% without compromising on functionality or build speed.</p>
                         <div
-                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5">
+                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5 mt-auto">
                             <span class="text-xs text-slate-500 font-bold uppercase tracking-widest">May 08, 2026</span>
                             <a href="#"
                                 class="text-indigo-600 dark:text-indigo-400 font-bold text-sm flex items-center gap-2 group/link transition-all">
@@ -178,20 +178,20 @@
                 </div>
 
                 <!-- Blog 3 -->
-                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm sm:col-span-2 xl:col-span-1"
+                <div class="glass-card rounded-[2.5rem] overflow-hidden border border-indigo-500/10 hover:border-indigo-500/30 transition-all hover-lift shadow-sm sm:col-span-2 xl:col-span-1 flex flex-col"
                     data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-64 relative overflow-hidden">
+                    <div class="h-64 relative overflow-hidden shrink-0">
                         <img src="assets/images/hero2.png" alt="CI/CD Security"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-6 sm:p-10">
+                    <div class="p-6 sm:p-10 flex-1 flex flex-col">
                         <span
                             class="text-[10px] font-bold text-purple-600 dark:text-purple-400 uppercase tracking-widest mb-4 block">Security</span>
                         <h3 class="text-2xl font-bold mb-5 leading-tight">Securing Your CI/CD Pipeline</h3>
                         <p class="text-slate-600 dark:text-slate-400 text-sm mb-10 leading-relaxed">How to implement
                             automated secret scanning and vulnerability checks in every single pull request safely.</p>
                         <div
-                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5">
+                            class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-white/5 mt-auto">
                             <span class="text-xs text-slate-500 font-bold uppercase tracking-widest">May 05, 2026</span>
                             <a href="#"
                                 class="text-indigo-600 dark:text-indigo-400 font-bold text-sm flex items-center gap-2 group/link transition-all">
