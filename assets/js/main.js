@@ -149,6 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         sidebar.classList.remove('translate-x-full');
                     }
                 }
+
+                // Scroll to top when switching tabs
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     }

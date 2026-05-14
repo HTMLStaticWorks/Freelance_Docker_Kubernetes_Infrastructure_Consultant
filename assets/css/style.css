@@ -21,6 +21,13 @@ html.light body {
     color: var(--text-dark);
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -87,11 +94,17 @@ body {
 }
 
 /* Dark Section Overrides for Light Mode */
+.light .always-dark {
+    background: #0f172a !important;
+}
+
 .light .always-dark h1, 
 .light .always-dark h2, 
 .light .always-dark h3, 
 .light .always-dark h4, 
+.light .always-dark h5,
 .light .always-dark p,
+.light .always-dark button,
 .light .always-dark .text-white {
     color: #ffffff !important;
 }

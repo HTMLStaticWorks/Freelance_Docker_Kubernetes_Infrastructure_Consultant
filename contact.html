@@ -33,7 +33,7 @@
                     </div>
                     <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">KubeScale</span>
                 </div>
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center gap-8">
                     <a href="index.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Home 1</a>
                     <a href="home2.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Home 2</a>
                     <a href="about.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">About</a>
@@ -42,7 +42,7 @@
                     <a href="dashboard.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Dashboard</a>
                     <a href="contact.html" class="nav-link nav-link-ltr text-sm font-medium text-indigo-500 font-bold">Contact</a>
                 </div>
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center gap-4">
                     <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-xl"><span id="theme-icon">☀️</span></button>
                     <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-sm font-bold">RTL</button>
                     <a href="login.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20">Login</a>
@@ -50,10 +50,8 @@
 
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center gap-4">
-                    <button id="theme-toggle-mobile" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-xl">☀️</button>
-                    <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-sm font-bold">RTL</button>
-                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-slate-300">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
@@ -69,7 +67,14 @@
                 <a href="blog.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Blog</a>
                 <a href="dashboard.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Dashboard</a>
                 <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Contact</a>
-                <div class="pt-4 flex flex-col gap-3">
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 mt-4 flex flex-col gap-4">
+                    <div class="flex items-center justify-between px-4">
+                        <span class="text-sm font-medium">Appearance</span>
+                        <div class="flex items-center gap-2">
+                            <button id="theme-toggle-mobile" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xl">☀️</button>
+                            <button id="rtl-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-bold">RTL</button>
+                        </div>
+                    </div>
                     <a href="login.html" class="text-center px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-600/20">Login</a>
                 </div>
             </div>

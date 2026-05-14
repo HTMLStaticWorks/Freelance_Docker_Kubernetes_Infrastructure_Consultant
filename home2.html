@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center gap-8">
                     <a href="index.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">Home 1</a>
                     <a href="home2.html" class="nav-link nav-link-ltr text-sm font-medium text-indigo-500 font-bold hover:text-indigo-500 transition-colors">Home 2</a>
                     <a href="about.html" class="nav-link nav-link-ltr text-sm font-medium hover:text-indigo-500 transition-colors">About</a>
@@ -47,7 +47,7 @@
                 </div>
 
                 <!-- Utilities & Auth -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center gap-4">
                     <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 transition-colors text-xl" title="Toggle Theme">
                         <span id="theme-icon">☀️</span>
                     </button>
@@ -57,10 +57,8 @@
 
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center gap-4">
-                    <button id="theme-toggle-mobile" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-xl">☀️</button>
-                    <button id="rtl-toggle" class="p-2.5 rounded-full hover:bg-indigo-500/10 text-sm font-bold">RTL</button>
-                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-slate-300">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" class="p-2 text-indigo-600 dark:text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
@@ -76,7 +74,14 @@
                 <a href="blog.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Blog</a>
                 <a href="dashboard.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Dashboard</a>
                 <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-indigo-500/10 text-base font-medium">Contact</a>
-                <div class="pt-4 flex flex-col gap-3">
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 mt-4 flex flex-col gap-4">
+                    <div class="flex items-center justify-between px-4">
+                        <span class="text-sm font-medium">Appearance</span>
+                        <div class="flex items-center gap-2">
+                            <button id="theme-toggle-mobile" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xl">☀️</button>
+                            <button id="rtl-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-bold">RTL</button>
+                        </div>
+                    </div>
                     <a href="login.html" class="text-center px-4 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-600/20">Login</a>
                 </div>
             </div>
@@ -200,9 +205,9 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-10">
-                <div class="glass-card p-10 rounded-[2.5rem] border border-indigo-500/10 shadow-sm" data-aos="fade-right">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
-                        <h4 class="font-bold text-xl sm:text-2xl whitespace-nowrap">Cloud Spending Report</h4>
+                <div class="glass-card p-6 sm:p-10 rounded-[2.5rem] border border-indigo-500/10 shadow-sm" data-aos="fade-right">
+                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-10">
+                        <h4 class="font-bold text-xl sm:text-2xl">Cloud Spending Report</h4>
                         <span class="text-green-500 text-xs sm:text-sm font-bold bg-green-500/10 px-3 py-1 rounded-full whitespace-nowrap">-15% this month</span>
                     </div>
                     <div class="space-y-8">
